@@ -1,7 +1,7 @@
- //declare bacteria variables here   
+ Bacterium bill;//declare bacteria variables here   
  void setup()   
  {     
- 	//initialize bacteria variables here   
+ 	int x=//initialize bacteria variables here   
  }   
  void draw()   
  {    
