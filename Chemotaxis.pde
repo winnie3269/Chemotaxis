@@ -7,7 +7,7 @@ void setup()
   int y=200;
   int c=0;
   colony=new Bacteria[100];
-  for(int i=0; i<colony.length; i++)
+  for (int i=0; i<colony.length; i++)
   {
     colony[i]=new Bacteria();
   }//initialize bacteria variables here
@@ -17,7 +17,12 @@ void draw()
   background(255);
   Bacteria bill=new Bacteria();
   bill.move();
-  bill.show();//move and show the bacteria
+  bill.show();
+  for (int i=0; i<colony.length; i++)
+  {
+    colony[i].move();
+    colony[i].show();
+  }//move and show the bacteria
 }  
 class Bacteria    
 {     
@@ -36,5 +41,5 @@ class Bacteria
   {
     fill(0);
     ellipse(myX, myY, 5, 5);
-  }    
+  }
 }
