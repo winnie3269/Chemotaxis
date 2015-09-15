@@ -1,10 +1,16 @@
-Bacteria bill;//declare bacteria variables here   
+Bacteria bill;
+Bacteria [] colony;//declare bacteria variables here   
 void setup()   
 {     
   size(400, 400);
   int x=200;
   int y=200;
-  int c=0;//initialize bacteria variables here
+  int c=0;
+  colony=new Bacteria[100];
+  for(int i=0; i<colony.length; i++)
+  {
+    colony[i]=new Bacteria();
+  }//initialize bacteria variables here
 }   
 void draw()   
 {    
