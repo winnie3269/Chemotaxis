@@ -39,7 +39,8 @@ class Bacteria
   }
   void show()
   {
-    fill(0);
+    noStroke();
+    fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
     ellipse(myX, myY, 5, 5);
   }
 }
