@@ -3,9 +3,6 @@ Bacteria [] colony;//declare bacteria variables here
 void setup()   
 {     
   size(400, 400);
-  int x=200;
-  int y=200;
-  int c=0;
   colony=new Bacteria[100];
   for (int i=0; i<colony.length; i++)
   {
@@ -14,7 +11,7 @@ void setup()
 }   
 void draw()   
 {    
-  background(255);
+  background(0);
   Bacteria bill=new Bacteria();
   bill.move();
   bill.show();
@@ -26,11 +23,16 @@ void draw()
 }  
 class Bacteria    
 {     
-  int myX, myY;
+  int myX, myY,bactColor;
   Bacteria()
   {
     myX=200;
     myY=200;
+    int r=0;
+    int g=(int)(Math.random()*200)+55;
+    int b=(int)(Math.random()*200)+55;
+    int o=(int)(Math.random()*200)+55;
+    bactColor=color(r,g,b,o);
   }
   void move()
   {
@@ -40,7 +42,9 @@ class Bacteria
   void show()
   {
     noStroke();
-    fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
-    ellipse(myX, myY, 5, 5);
+    fill(bactColor);
+    rotate(PI/5.0);
+    ellipse(myX,myY,8,8);
+    ellipse(myX+5,myY,8,8);
   }
 }
